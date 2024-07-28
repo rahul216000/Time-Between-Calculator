@@ -25,7 +25,7 @@ function isValidTimeFormat(time) {
 
 app.get('/', (req, res) => {
     const shuffledTimeRanges = shuffle([...timeRanges]);
-    res.render('Homepage', { result: null, startTime: null, endTime: null, timeRanges: shuffledTimeRanges });
+    res.render('HomePage', { result: null, startTime: null, endTime: null, timeRanges: shuffledTimeRanges });
 });
 
 app.post('/calculate', (req, res) => {
@@ -34,7 +34,7 @@ app.post('/calculate', (req, res) => {
     const timeDifference = calculateTimeDifference(startTime, endTime);
     const shuffledTimeRanges = shuffle([...timeRanges]);
 
-    res.render('Homepage', { result: timeDifference, startTime, endTime, timeRanges: shuffledTimeRanges });
+    res.render('HomePage', { result: timeDifference, startTime, endTime, timeRanges: shuffledTimeRanges });
 });
 
 
