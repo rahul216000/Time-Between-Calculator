@@ -1,4 +1,5 @@
 const express = require('express');
+const PORT = process.env.PORT || 5001;
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -112,7 +113,11 @@ app.use((req, res) => {
 // https://docs.google.com/document/d/1VDql9iV6o_cUdCN42HU9mR1HcuhmBfgO1YLHcJgtHa8/edit#heading=h.z9h7sa1kmbso
 
 
-const port = 5001 || process.env.PORT;
-app.listen(port, () => {
-    console.log(`Server is running on ${port}`);
+app.listen(PORT, (error) => {
+    if (!error) {
+        console.log("Server is Successfully Running, and App is listening on port " + PORT)
+    } else {
+        console.log('Server not started ' + error);
+    }
+
 });
