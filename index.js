@@ -1,9 +1,11 @@
 const express = require('express');
 const PORT = process.env.PORT || 5001;
 const app = express();
+const path = require('path');
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const timeRanges = [
     '6am-3pm', '8am-2pm', '1pm-7am', '10am-6pm', '9am-5pm', '7pm-6pm', '12am-1am',
@@ -26,6 +28,9 @@ function isValidTimeFormat(time) {
 app.get('/', (req, res) => {
     const shuffledTimeRanges = shuffle([...timeRanges]);
     res.render('HomePage', { result: null, startTime: null, endTime: null, timeRanges: shuffledTimeRanges });
+});
+app.get('/duration', (req, res) => {
+    res.render('Duration');
 });
 
 app.post('/calculate', (req, res) => {

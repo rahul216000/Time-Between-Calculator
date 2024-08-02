@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Between Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="time"] {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .links a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Time Between Calculator</h1>
+        <form action="/calculate" method="post">
+            <input type="time" name="startTime" required>
+            <input type="time" name="endTime" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <% if (result) { %>
+            <div class="result">
+                <h2>Time Range</h2>
+                <p>Start Time: <%= startTime %></p>
+                <p>End Time: <%= endTime %></p>
+                <h2>Time Difference</h2>
+                <p><%= result.hours %> hours and <%= result.minutes %> minutes</p>
+                <p>Total Minutes: <%= result.totalMinutes %> minutes</p>
+            </div>
+        <% } %>
+        <div class="links">
+            <h2>Quick Links</h2>
+            <% timeRanges.forEach(range => { %>
+                <a href="/<%= range %>"><%= range %></a>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>

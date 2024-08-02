@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+:root {
+    --dark-blue: #002D62;
+}
+
+body {
+    background-color: #3056D3;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.logo {
+    height: 60px;
+    height: 60px;
+}
+
+.navbar {
+    background-color: transparent !important;
+    color: white;
+}
+
+.nav-item a {
+    background: #fff;
+    color: #000;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: .4375rem 1.25rem;
+    transition: all .3s ease;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.nav-item a:hover {
+    color: black;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.TopPara {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.ParaWidth {
+    margin-left: 16%;
+    margin-right: 16%;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.calculator {
+    background: #fff;
+    color: #000;
+    border-radius: .625rem;
+    width: 50rem;
+    max-width: 100%;
+    margin: 3.125rem auto 0;
+    padding: 2.8125rem 5rem;
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.left {
+    width: 43%;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-wrapper {
+    border: .0625rem solid #3056d3;
+    border-radius: .3125rem;
+    padding: .125rem 0;
+    width: 100%;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width: 14%;
+}
+
+.swap {
+    width: 1.4375rem;
+    cursor: pointer;
+}
+
+.middle span {
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.right {
+    width: 43%;
+}
+
+
+.TimeSelect {
+    border: 0;
+    border-bottom: .0625rem solid rgba(0, 0, 0, .15);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding: .4375rem 0;
+    width: 100%;
+    margin-bottom: .4375rem;
+}
+
+.AmPmSelect {
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    margin-bottom: .4375rem;
+}
+
+select {
+    outline: none;
+}
+
+.description {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+
+.social-icons {
+    background: #3056d3;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    border-top: .125rem solid #333;
+    padding: 3.125rem 0;
+}
+
+.icon {
+    width: 1.5625rem;
+}
+
+.social-icons .icon:not(:last-child) {
+    margin-right: 1.25rem;
+}
+
+.social-icons .icon svg {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+    background: #333;
+    padding: 3.125rem 0 1.25rem;
+}
+
+.containerFooter {
+    display: block;
+    width: 1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.copyright {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.footer-nav {
+    margin-top: 1.875rem;
+}
+
+.footer-nav .nav {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav .nav .menu-item {
+    padding: 0 .625rem;
+}
+
+footer .footer-nav .nav .menu-item:not(:last-child) {
+    border-right: .0625rem solid #fff;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Table CSS */
+
+.containerTable {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    min-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+}
+
+.styled-table thead tr {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+    transition: background-color 0.3s;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.styled-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.styled-table tbody tr td:first-of-type::before,
+.styled-table tbody tr td:last-of-type::before {
+    content: '';
+}
+
+.content p {
+    line-height: 1.6;
+    margin: 16px 0;
+}
+
+
+.item {
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 30%;
+    margin: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.margin5px {
+    margin: 5px;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom {
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+
+.custom:hover {
+    background-color: #0056b3;
+}
+
+#ResultContainer p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .middle {
+        width: 100%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .ParaWidth {
+        margin: 3%;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        text-align: center;
+        display: table-cell;
+        padding: 10px;
+    }
+
+    .item {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .margin5px {
+        margin-bottom: 30px;
+    }
+}
