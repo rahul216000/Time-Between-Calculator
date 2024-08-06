@@ -11,13 +11,8 @@ body {
 }
 
 .logo {
-    display: inline-block;
-    margin-bottom: 20px;
-}
-
-.logo {
-    height: 60px;
-    height: 60px;
+    height: 103px;
+    width: 120px;
 }
 
 .navbar {
@@ -139,7 +134,7 @@ label {
     font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
-    width: 100%;
+    width: 95%;
     margin-bottom: .4375rem;
 }
 
@@ -305,7 +300,6 @@ footer a {
 
 .item a {
     color: white;
-    text-decoration: none;
 }
 
 .button {
@@ -333,6 +327,25 @@ footer a {
 #ResultContainer p{
     font-size: 1.2rem;
     font-weight: 400;
+}
+
+.time-picker input {
+    width: 50px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    background: none;
+    outline: none;
+    appearance: none;
+}
+
+
+.colon {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 1em;
 }
 
 @media only screen and (max-width: 600px) {
@@ -371,5 +384,59 @@ footer a {
 
     .margin5px {
         margin-bottom: 30px;
+    }
+}
+
+.result-box {
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    max-width: 900px; /* Increased width */
+    margin: 0 auto; /* Center align */
+}
+
+.result-box div {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white for section background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for sections */
+}
+
+.result-box h4, .result-box h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.4rem; /* Slightly larger font size */
+    font-weight: 600; /* Bold font weight */
+}
+
+.result-box p {
+    margin: 0;
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+.result-box strong {
+    color: #e0f7fa; /* Light cyan color for better contrast */
+    font-size: 1.4rem; /* Slightly larger font size */
+}
+
+/* Make sure the box looks good on all screen sizes */
+@media (max-width: 767.98px) {
+    .result-box {
+        padding: 20px;
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .result-box h4, .result-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .result-box p {
+        font-size: 1rem;
+    }
+
+    .result-box strong {
+        font-size: 1.2rem;
     }
 }

@@ -3,92 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Time Between Calculator</title>
+    <title>Duration Calculator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
             margin: 0;
         }
+
         .container {
-            background: #fff;
-            padding: 20px;
+            background-color: #fff;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
         }
+
         h1 {
+            text-align: center;
             color: #333;
-        }
-        form {
             margin-bottom: 20px;
+            font-size: 24px;
         }
-        input[type="time"] {
-            margin: 10px;
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input, .checkbox-group {
+            width: 100%;
             padding: 10px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            box-sizing: border-box;
         }
-        button {
-            padding: 10px 20px;
-            background-color: #28a745;
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        button.custom {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
-        button:hover {
-            background-color: #218838;
-        }
-        .result {
-            margin-top: 20px;
-        }
-        .links {
-            margin-top: 20px;
-        }
-        .links a {
-            display: inline-block;
-            margin: 5px;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .links a:hover {
+
+        button.custom:hover {
             background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #result h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #result ul {
+            padding-left: 20px;
+        }
+
+        #result li {
+            margin-bottom: 5px;
+        }
+
+        .message {
+            color: red;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Time Between Calculator</h1>
-        <form action="/calculate" method="post">
-            <input type="time" name="startTime" required>
-            <input type="time" name="endTime" required>
-            <button type="submit">Calculate</button>
-        </form>
-        <% if (result) { %>
-            <div class="result">
-                <h2>Time Range</h2>
-                <p>Start Time: <%= startTime %></p>
-                <p>End Time: <%= endTime %></p>
-                <h2>Time Difference</h2>
-                <p><%= result.hours %> hours and <%= result.minutes %> minutes</p>
-                <p>Total Minutes: <%= result.totalMinutes %> minutes</p>
-            </div>
-        <% } %>
-        <div class="links">
-            <h2>Quick Links</h2>
-            <% timeRanges.forEach(range => { %>
-                <a href="/<%= range %>"><%= range %></a>
-            <% }); %>
+        <h1>Duration Calculator</h1>
+        <div class="input-group">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" max="2099-12-31">
         </div>
+        <div class="input-group">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" max="2099-12-31">
+        </div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="include-end-date">
+            <label for="include-end-date">Include end date in calculation (1 day is added)</label>
+        </div>
+        <button id="calculate" class="custom">Calculate</button>
+        <div id="result"></div>
+        <div id="message" class="message"></div>
     </div>
+    <script>
+        
+    </script>
 </body>
 </html>

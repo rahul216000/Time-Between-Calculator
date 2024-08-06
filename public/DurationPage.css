@@ -134,7 +134,7 @@ label {
     font-size: 1.5rem;
     font-weight: 500;
     text-align: center;
-    width: 100%;
+    width: 95%;
     margin-bottom: .4375rem;
 }
 
@@ -341,11 +341,41 @@ footer a {
     appearance: none;
 }
 
+.InputDate{
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    background: none;
+    outline: none;
+    appearance: none;
+    padding: 20px;
+}
+
 
 .colon {
     display: inline-block;
     margin: 0 2px;
     font-size: 1em;
+}
+
+.checkbox-group {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -385,105 +415,84 @@ footer a {
     .margin5px {
         margin-bottom: 30px;
     }
-}
 
-.result-box {
-    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
-    color: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    max-width: 900px; /* Increased width */
-    margin: 0 auto; /* Center align */
-}
-
-.result-box div {
-    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white for section background */
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for sections */
-}
-
-.result-box h4, .result-box h3 {
-    margin: 0 0 15px 0;
-    font-size: 1.4rem; /* Slightly larger font size */
-    font-weight: 600; /* Bold font weight */
-}
-
-.result-box p {
-    margin: 0;
-    font-size: 1.2rem; /* Slightly larger font size */
-}
-
-.result-box strong {
-    color: #e0f7fa; /* Light cyan color for better contrast */
-    font-size: 1.4rem; /* Slightly larger font size */
-}
-
-/* Make sure the box looks good on all screen sizes */
-@media (max-width: 767.98px) {
-    .result-box {
-        padding: 20px;
-        max-width: 100%; /* Full width on small screens */
-    }
-
-    .result-box h4, .result-box h3 {
-        font-size: 1.2rem;
-    }
-
-    .result-box p {
+    .InputDate{
         font-size: 1rem;
-    }
-
-    .result-box strong {
-        font-size: 1.2rem;
+        padding: 10px;
     }
 }
 
-.content-box {
+
+
+.result-box, .related-links-box {
     background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
     color: white;
     border-radius: 20px;
     padding: 40px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-    max-width: 800px; /* Consistent width */
-    margin: 0 auto; /* Center align */
+    max-width: 900px; /* Consistent width */
+    margin: 20px auto; /* Center align with margin for spacing */
     text-align: center;
 }
 
-.content-box h3, .content-box h5 {
-    margin: 0 0 20px 0;
+.result-box h3, .related-links-box h3 {
+    margin: 20px 0;
     font-size: 1.6rem; /* Larger font size for emphasis */
     font-weight: 600; /* Bold font weight */
 }
 
-.content-box p {
-    margin: 0 0 20px 0;
+.result-box p, .related-links-box p, .result-box li, .related-links-box li {
+    margin: 10px 0;
     font-size: 1.2rem; /* Larger font size for readability */
 }
 
-.content-box strong {
+.result-box strong, .related-links-box strong {
     color: #e0f7fa; /* Light cyan color for emphasis */
     font-size: 1.4rem; /* Larger font size for emphasis */
 }
 
-/* Make sure the box looks good on all screen sizes */
+.message {
+    background: rgba(255, 235, 59, 0.2); /* Light yellow background for the message */
+    color: #ffeb3b; /* Yellow color for warning message */
+    font-size: 1.2rem; /* Font size for the message */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.result-box ul, .related-links-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.result-box ul li, .related-links-box ul li {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white for list items */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.related-links-box ul li a {
+    color: #e0f7fa; /* Light cyan color for links */
+    /* text-decoration: none; */
+}
+
+/* Make sure the boxes look good on all screen sizes */
 @media (max-width: 767.98px) {
-    .content-box {
+    .result-box, .related-links-box {
         padding: 20px;
         max-width: 100%; /* Full width on small screens */
     }
 
-    .content-box h3, .content-box h5 {
+    .result-box h3, .related-links-box h3 {
         font-size: 1.4rem;
     }
 
-    .content-box p {
+    .result-box p, .related-links-box p, .result-box li, .related-links-box li {
         font-size: 1rem;
     }
 
-    .content-box strong {
+    .result-box strong, .related-links-box strong {
         font-size: 1.2rem;
     }
 }
