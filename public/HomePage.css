@@ -11,7 +11,7 @@ body {
 }
 
 .logo {
-    height: 103px;
+    height: 120px;
     width: 120px;
 }
 
@@ -136,6 +136,8 @@ label {
     text-align: center;
     width: 95%;
     margin-bottom: .4375rem;
+    background-color: white;
+
 }
 
 select {
@@ -437,6 +439,79 @@ footer a {
     }
 
     .result-box strong {
+        font-size: 1.2rem;
+    }
+}
+
+.related-links-box {
+    background: linear-gradient(135deg, #6b73ff 0%, #000dff 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    max-width: 900px; /* Consistent width */
+    margin: 20px auto; /* Center align with margin for spacing */
+    text-align: center;
+}
+
+.related-links-box h3 {
+    margin: 20px 0;
+    font-size: 1.6rem; /* Larger font size for emphasis */
+    font-weight: 600; /* Bold font weight */
+}
+
+.related-links-box p, .related-links-box li {
+    margin: 10px 0;
+    font-size: 1.2rem; /* Larger font size for readability */
+}
+
+.related-links-box strong {
+    color: #e0f7fa; /* Light cyan color for emphasis */
+    font-size: 1.4rem; /* Larger font size for emphasis */
+}
+
+.message {
+    background: rgba(255, 235, 59, 0.2); /* Light yellow background for the message */
+    color: #ffeb3b; /* Yellow color for warning message */
+    font-size: 1.2rem; /* Font size for the message */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.related-links-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.related-links-box ul li {
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent white for list items */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.related-links-box ul li a {
+    color: #e0f7fa; /* Light cyan color for links */
+    /* text-decoration: none; */
+}
+
+/* Make sure the boxes look good on all screen sizes */
+@media (max-width: 767.98px) {
+    .related-links-box {
+        padding: 20px;
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .related-links-box h3 {
+        font-size: 1.4rem;
+    }
+
+    .related-links-box p, .related-links-box li {
+        font-size: 1rem;
+    }
+
+    .related-links-box strong {
         font-size: 1.2rem;
     }
 }
