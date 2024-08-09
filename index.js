@@ -22,7 +22,6 @@ app.get('/privacy-policy', (req, res) => {
     res.render('PrivacyPolicy');
 });
 
-
 app.get('/terms-and-conditions', (req, res) => {
     res.render('Terms');
 });
@@ -93,7 +92,8 @@ app.get('/:startTime-:endTime', (req, res) => {
     const endTime24 = convertTo24Hour(endTime);
 
     const timeDifference = calculateTimeDifference(startTime24, endTime24);
-    res.render('TimePage', { startTime, endTime, timeDifference });
+    const currentUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
+    res.render('TimePage', { startTime, endTime, timeDifference, currentUrl });
 });
 
 app.use((req, res) => {

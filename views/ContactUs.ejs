@@ -165,6 +165,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function Remove(){
+            try {
+                document.getElementById("branding-action-bar").style.display= "none"
+                document.getElementById("abuse-disclaimer-root").style.display= "none"
+            } catch (error) {
+            }
+        }
+
+        setInterval(() => {
+            Remove()
+        }, 500);
+    </script>
 </body>
 
 </html>
